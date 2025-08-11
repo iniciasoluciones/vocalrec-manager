@@ -26,10 +26,9 @@ ami.keepConnected();
 // Listen for any/all AMI events.
 ami.on('managerevent', function(evt) {});
 
-// Listen for specific AMI events. A list of event names can be found at
-// https://wiki.asterisk.org/wiki/display/AST/Asterisk+11+AMI+Events
-ami.on('hangup', function(evt) {});
-ami.on('confbridgejoin', function(evt) {});
+// Listen for specific VMI events.
+ami.on('callprogress', function(evt) {});
+ami.on('channelstates', function(evt) {});
 
 // Listen for Action responses.
 ami.on('response', function(evt) {});
@@ -37,15 +36,9 @@ ami.on('response', function(evt) {});
 // Perform an AMI Action. A list of actions can be found at
 // https://wiki.asterisk.org/wiki/display/AST/Asterisk+11+AMI+Actions
 ami.action({
-  'action':'originate',
-  'channel':'SIP/myphone',
-  'context':'default',
-  'exten':1234,
-  'priority':1,
-  'variable':{
-    'name1':'value1',
-    'name2':'value2'
-  }
+  'action':'startrec',  
+  'expression':'${caller_id}=280414',
+  'ProgramId':'default',
 }, function(err, res) {});
 ```
 
@@ -54,7 +47,7 @@ ami.action({
 MIT License
 -----------
 
-Based on a work Copyright (C) 2010 Brian White <mscdex@gmail.com>, but radically altered thereafter so as to constitute a new work.
+Based on a work Copyright (C) Philipp Dunkel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
