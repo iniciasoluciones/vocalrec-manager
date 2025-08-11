@@ -1,0 +1,19 @@
+{
+  "name":"vocalrec-manager",
+  "author": "Francisco Alvarez",
+  "maintainers": [
+    {
+      "name": "Francisco Alvarez",
+      "email": "falvarez@iniciasoluciones.es",
+      "web": "https://github.com/igorescobar"
+    }
+  ],
+  "version":"0.1.16",
+  "description":"A node.js module for interacting with the VocalRec Manager API.",
+  "keywords": ["vocalrec", "voip", "vmi", "vocalrec-manager"],
+  "main": "index.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/falvarezoliva/NodeJS-AsteriskManager.git"
+  }
+}
