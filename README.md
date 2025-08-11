@@ -1,14 +1,12 @@
-# Asterisk Manager API [![Total views](https://sourcegraph.com/api/repos/github.com/pipobscure/NodeJS-AsteriskManager/.counters/views.png)](https://sourcegraph.com/github.com/pipobscure/NodeJS-AsteriskManager)
+# VocalRec Manager API [![Total views](https://sourcegraph.com/api/repos/github.com/pipobscure/NodeJS-AsteriskManager/.counters/views.png)](https://sourcegraph.com/github.com/pipobscure/NodeJS-AsteriskManager)
 [![NPM](https://nodei.co/npm/asterisk-manager.png)](https://nodei.co/npm/asterisk-manager/)  
 
-For a project of mine I needed a low level interface to the Asterisk Manager API. I looked around and found https://github.com/mscdex/node-asterisk . While it was a good starting point, it had too many abstractions for my taste. Which is why I based my version on it an then radically refactored it. In the end there now is very little in common with it.
-
-So this is basically a different piece of work, but since there is a shared DNA and I got a good start by depending on Brian's work, I feel like giving credit is appropriate.
+Simply interface to the VocalRec Manager API
 
 ## Install
 
 ```
-$ npm install asterisk-manager
+$ npm install vocalrec-manager
 ```
 
 ## Usage
@@ -20,7 +18,7 @@ $ npm install asterisk-manager
  * password: username's password for authentication
  * events: this parameter determines whether events are emited.
  **/
-var ami = new require('asterisk-manager')('port','host','username','password', true);
+var ami = new require('vocalrec-manager')('port','host','username','password', true);
 
 // In case of any connectiviy problems we got you coverd.
 ami.keepConnected();
@@ -50,38 +48,11 @@ ami.action({
   }
 }, function(err, res) {});
 ```
-## Contributors
-
- * [Philipp Dunkel](https://github.com/pipobscure)
- * [Igor Escobar](https://github.com/igorescobar)
- * [Tekay](https://github.com/Tekay)
- * [Kofi Hagan](https://github.com/kofibentum)
- * [Hugo Chinchilla Carbonell](https://github.com/hugochinchilla)
- * [Nick Mooney](https://github.com/Gnewt)
- * [Asp3ctus](https://github.com/Asp3ctus)
- * [Christian Gutierrez](https://github.com/chesstrian)
- * [bchavet](https://github.com/bchavet)
- * [Joserwan](https://github.com/joserwan)
- * [Joseph Garrone](https://github.com/garronej)
 
 ## License
 
 MIT License
 -----------
-
-Copyright (C) 2012 - 2017 by
-  [Philipp Dunkel](https://github.com/pipobscure)
-  [abroweb](https://github.com/abroweb)
-  [Igor Escobar](https://github.com/igorescobar)
-  [Tekay](https://github.com/Tekay)
-  [Kofi Hagan](https://github.com/kofibentum)
-  [Hugo Chinchilla Carbonell](https://github.com/hugochinchilla)
-  [Nick Mooney](https://github.com/Gnewt)
-  [Asp3ctus](https://github.com/Asp3ctus)
-  [Christian Gutierrez](https://github.com/chesstrian)
-  [bchavet](https://github.com/bchavet)
-  [Joserwan](https://github.com/joserwan)
-  [Joseph Garrone](https://github.com/garronej)
 
 Based on a work Copyright (C) 2010 Brian White <mscdex@gmail.com>, but radically altered thereafter so as to constitute a new work.
 
